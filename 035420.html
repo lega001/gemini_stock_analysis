@@ -3,140 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NAVER(035420) 향후 1개월 주가 예측</title>
+    <title>NAVER 뉴스 분석</title>
     <style>
         body {
-            font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f4;
             margin: 0;
             padding: 20px;
+            background-color: #f4f7f6;
+            color: #333;
         }
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: auto;
-            background: #fff;
+            background: #ffffff;
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         h1, h2, h3 {
             color: #003366;
-            border-bottom: 2px solid #0056b3;
+            border-bottom: 2px solid #005f9e;
             padding-bottom: 10px;
+            margin-top: 30px;
         }
         h1 {
             text-align: center;
-            font-size: 2em;
+            font-size: 2.5em;
+            margin-bottom: 20px;
         }
-        .prediction-score {
-            text-align: center;
-            margin: 20px 0;
+        .summary {
+            background-color: #eaf5ff;
+            border-left: 5px solid #005f9e;
             padding: 20px;
-            background-color: #e6f7ff;
-            border-left: 5px solid #0056b3;
+            margin: 20px 0;
+            text-align: center;
+            border-radius: 5px;
         }
-        .score {
-            font-size: 4em;
+        .summary .score {
+            font-size: 2.5em;
             font-weight: bold;
-            color: #0056b3;
+            color: #003366;
         }
-        .score-desc {
+        .summary .details {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 15px;
             font-size: 1.2em;
-            color: #004085;
+            flex-wrap: wrap; /* Added for better responsiveness */
         }
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        li {
-            background: #f9f9f9;
-            margin-bottom: 10px;
-            padding: 15px;
-            border-radius: 5px;
-            border-left: 4px solid #17a2b8;
-        }
-        .factors-container {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
-        }
-        .bullish h3 { color: #28a745; border-bottom-color: #28a745; }
-        .bearish h3 { color: #dc3545; border-bottom-color: #dc3545; }
-        .bullish li { border-left-color: #28a745; }
-        .bearish li { border-left-color: #dc3545; }
-        .conclusion {
-            margin-top: 20px;
-            padding: 15px;
-            background-color: #f0f0f0;
-            border-radius: 5px;
-            text-align: justify;
+        .summary .positive {
+            color: #008000;
             font-weight: bold;
         }
-        .citation {
-            font-size: 0.8em;
-            color: #666;
+        .summary .negative {
+            color: #d90000;
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #003366;
+            color: white;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #e2eff9;
+        }
+        a {
+            color: #005f9e;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .positive-header { color: #008000; border-bottom-color: #008000; }
+        .negative-header { color: #d90000; border-bottom-color: #d90000; }
+        .score-badge-positive {
+            display: inline-block;
+            background-color: #e6ffe6;
+            color: #008000;
+            padding: 4px 8px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        .score-badge-negative {
+            display: inline-block;
+            background-color: #ffe6e6;
+            color: #d90000;
+            padding: 4px 8px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 0.9em;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>NAVER (035420) 향후 1개월 주가 예측</h1>
+        <h1>NAVER (035420) 최신 뉴스 분석 및 주가 영향 요약</h1>
 
-        <div class="prediction-score">
-            <div class="score-desc">예측 점수 (100점 만점)</div>
-            <div class="score">65</div>
-            <div class="score-desc">(100점: 완전 상승, 50점: 보합, 0점: 완전 하락)</div>
-        </div>
-
-        <h2>논리적 근거</h2>
-
-        <div class="factors-container">
-            <div class="bullish">
-                <h3>상승 요인 (Bullish Factors) ▲</h3>
-                <ul>
-                    <li>
-                        <strong>두나무와의 빅딜 기대감:</strong> 국내 최대 가상자산 거래소 '업비트' 운영사인 두나무를 자회사로 편입하는 방안이 논의되면서 새로운 성장 동력 확보에 대한 기대감이 매우 높습니다. (2025-09-29) 이 협력이 성사될 경우, 네이버는 핀테크와 가상자산을 아우르는 '슈퍼앱'으로 진화하며 기업가치가 재평가될 수 있습니다. (2025-09-25)
-                    </li>
-                    <li>
-                        <strong>견조한 커머스 및 AI 사업 성장:</strong> 커머스 부문은 수수료 인상 효과와 AI 기반 개인화 서비스 강화로 하반기에도 두 자릿수 성장이 목표이며 실적 개선을 이끌 전망입니다. (2025-08-12, 2025-05-09) 또한, 자체 AI 모델 '하이퍼클로바X'를 B2B 영역으로 확장하며 AI 사업의 수익화가 본격화되고 있습니다. (2025-05-13)
-                    </li>
-                    <li>
-                        <strong>매력적인 밸류에이션:</strong> 최근 주가 상승에도 불구하고 2026년 예상 주가수익비율(P/E)이 18~20배 수준으로, 글로벌 동종 기업 대비 할인되어 거래되고 있어 밸류에이션 부담이 적다는 분석이 있습니다. (2025-09-29, 2025-09-27)
-                    </li>
-                    <li>
-                        <strong>기관 투자자 중심의 수급 개선:</strong> 두나무와의 협력 발표 이후 기관 투자자들이 NAVER를 순매수하는 등 수급이 개선되는 모습을 보이고 있습니다. (2025-09-26) 이는 단기 주가에 긍정적인 요인으로 작용할 수 있습니다.
-                    </li>
-                </ul>
-            </div>
-
-            <div class="bearish">
-                <h3>하락 및 리스크 요인 (Bearish/Risk Factors) ▼</h3>
-                <ul>
-                    <li>
-                        <strong>라인야후 지분 매각 불확실성:</strong> 일본 정부의 라인야후 지분 매각 요구가 사실상 철회되었다는 보도가 있었으나 (2024-07-15), 네이버는 여전히 지분 관계에 대한 입장이 기존과 동일하다고 밝혀 불확실성이 완전히 해소되지 않았습니다. (2025-04-02) 이는 장기적인 해외 사업 전략에 부담으로 작용할 수 있습니다.
-                    </li>
-                    <li>
-                        <strong>본업 성장률 둔화 우려:</strong> 핵심 사업인 검색 광고 부문의 성장률이 둔화되고 있으며, 커머스 부문 역시 경쟁 심화로 인해 거래액 성장이 더딜 수 있다는 우려가 존재합니다. (2025-09-29)
-                    </li>
-                    <li>
-                        <strong>두나무 M&A의 복잡성 및 규제 리스크:</strong> 두나무와의 주식 교환은 지배구조 재편, 주주 이해관계 조율 등 복잡한 과정이 남아있어 단기간에 확정되기 어려우며, 성사되더라도 스테이블코인 사업 등은 금융 당국의 강도 높은 규제에 직면할 수 있습니다. (2025-09-29)
-                    </li>
-                     <li>
-                        <strong>대외 경제 불확실성 및 수급 변동성:</strong> 미국 기준금리 인하 기대감이 약화되는 등 글로벌 매크로 환경의 불확실성이 존재하며, 이에 따라 외국인과 기관의 동반 매도세가 나타날 경우 주가에 부담이 될 수 있습니다. (2025-09-26)
-                    </li>
-                </ul>
+        <div class="summary">
+            <h2>최종 점수: <span class="score">+10</span></h2>
+            <div class="details">
+                <span class="positive">긍정 뉴스: 14개</span>
+                <span class="negative">부정 뉴스: 4개</span>
+                <span>긍정 뉴스 비율: 78%</span>
             </div>
         </div>
 
-        <div class="conclusion">
-            <h4>종합 의견</h4>
-            <p>
-                NAVER는 최근 두나무와의 포괄적 주식 교환 논의로 인해 장기적인 성장 동력을 확보할 것이라는 강력한 기대감을 받고 있습니다. 이는 기존 사업의 성장 둔화 우려를 상쇄하고 기업가치를 재평가하게 만드는 핵심 모멘텀입니다. 견조한 커머스 실적과 AI 사업의 확장, 매력적인 밸류에이션 또한 주가에 긍정적입니다. 다만, 라인야후 지분 문제의 불확실성이 여전하고, 두나무와의 '빅딜'이 최종 성사되기까지는 여러 변수가 남아있습니다. 그럼에도 불구하고 향후 1개월 단기적으로는 두나무와의 시너지 기대감이 다른 리스크 요인을 압도하며 주가 상승을 이끌 가능성이 높다고 판단됩니다.
-            </p>
-        </div>
+        <h3 class="positive-header">긍정적 뉴스 (+1)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>날짜</th>
+                    <th>출처</th>
+                    <th>뉴스 제목</th>
+                    <th>점수</th>
+                    <th>간단 근거</th>
+                    <th>링크</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>2025-09-30</td><td>뉴스1</td><td>'두나무' 품는 네이버, 사흘간 시총 7조원 불어 '10위권' 탈환</td><td><span class="score-badge-positive">+1</span></td><td>두나무 인수 소식에 시가총액이 7조원 증가하며 10위권 진입.</td><td><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG6q2mwDug9YaLCD2wQLH44YP65fF5eu-zEr3l_Re7CVdLf7fzkqrukBqdGAZwB-RaqozESg8lgcYuDMV0E9lWC2_w7bbGKYm7m-p374RdYUBv9218rDltwI210a6dRtDnS6RhrJWEBYqEy" target="_blank">링크</a></td></tr>
+                <tr><td>2025-09-29</td><td>조선비즈</td><td>[특징주] 네이버, 두나무와 합병 기대감에 3거래일 연속 강세</td><td><span class="score-badge-positive">+1</span></td><td>두나무와의 합병 기대감으로 주가가 3거래일 연속 강세 기록.</td><td><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHFFnK6WwZorohSB6PqZFJrsxhiho-Sn4lAel4s-lHeT1Rtu4fMIVeYPy_O7E5fhVU0sqtDwazwwfdchx_Gr5fbQTDi_V0Gkpl04RQR6-U1_1iWLJRwfyfsXM4MM0HCA2hYzx8k87k0foQ6GKGBhHLuIH41M0nM_LpWpmmLi8hnknGpZFKWQYVhYN2K" target="_blank">링크</a></td></tr>
+                <tr><td>2025-09-30</td><td>조선비즈</td><td>네이버 목표가 40만원까지… DS證 “가상자산 사업 결합하면 재평가 가능”</td><td><span class="score-badge-positive">+1</span></td><td>DS투자증권이 가상자산 사업 결합으로 목표주가를 40만원으로 상향 제시.</td><td><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQECXqWDDHO0QXc7V-2fU5N-wwfJK63HcA6vqHMrEJxcoiHuKJR78pH_q3vq7_aoNG0WKPQXZml6epx4gSaKZz3qkct789h_Z3fvZa8rEslk9H943dSYncxSjVzgDFyKbnoDLPqGnzf5BziIMzZhWU6oJInZLQXJPOgLi935gH2VRXdlVPFYSI7uvjtP1w==" target="_blank">링크</a></td></tr>
+                <tr><td>2025-09-29</td><td>헬로스톡</td><td>[헬로스톡] 9월 29일 주목할 핵심 종목: 네이버·LG디스플레이·CJ대한통운·HD현대일렉트릭</td><td><span class="score-badge-positive">+1</span></td><td>두나무 협력 및 신사업 확장으로 밸류에이션 매력 증가, 목표주가 상향.</td><td><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG1FB2Sck_pAWJW_WvGT9byKX983kURuBR4IeQPem3wEI5z0p8Df20M1Q-ehJG9VbEjfuoXkK0Aq-J59CE7hbWbSWdaVSyXvqloqCWxrnnd-DYbvltxSlESoCmDb7eIY48nwWQwq6dh36AEH6v6" target="_blank">링크</a></td></tr>
+                <tr><td>2025-09-25</td><td>Reuters</td><td>Search engine Naver 035420 surged 11.4%, its biggest gain since June 18, after it said its financial affiliate was considering cooperation with Dunamu, an operator of crypto exchange UPbit.</td><td><span class="score-badge-positive">+1</span></td><td>금융 자회사의 두나무(업비트 운영사) 협력 검토 소식에 주가 11.4% 급등.</td><td><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQENlj-Pp4WJaWvgXd-MxZe1WoIr_RkdTlJP3ONxhHf07p4LmQ6wfVxfx4q3gYLEH95tABkpOcCG1mxDitnxJvP5xXkCmeZ5nMY1ZFUZr-NjadZ6-RGnPsKOCmIiCYQIyhSAGRmmsJpcTGJsJSULMby-8_W65qs2poIUOOWUbmbi83MkeewMH93G5DRH_Vpu9vYg_uoY6OQ7vw-Cih11kC6KKwSoq7hUD_H2qvlUu9Ow0XnKmUljJvRA2lSeWBUgNyMZSIqQtlnJoKJD0_kClWX1" target="_blank">링크</a></td></tr>
+                <tr><td>2025-09-29</td><td>매일경제</td><td>NAVER, `두나무 합병설 그리고 분명한 사실` 증권사 발표에 강세</td><td><span class="score-badge-positive">+1</span></td><td>두나무 합병 가능성 및 전략적 협력에 대한 증권사 분석으로 주가 강세.</td><td><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGOE4HDtmErnxP8Xe7GJ58gJ7PSzp_iO_hplCFZ2ATozL3RPF2hUmnXI3PzU1Z-sg9N9AlnlqVjABIzRp0wZnDOOahpGnem0grHtatAUdfuKU1_T_Hzb0OkqQgQppO-YmYyiLY=" target="_blank">링크</a></td></tr>
+                <tr><td>2025-08-17</td><td>Simply Wall St</td><td>Is It Too Late To Consider Buying NAVER Corporation (KRX:035420)?</td><td><span class="score-badge-positive">+1</span></td><td>향후 몇 년간 31%의 수익 증가 예상, 낙관적인 미래 전망으로 저평가 가능성.</td><td><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFK4NgoSipt3VcjZ0TR1TWzzfm7AbEoTpGsuPzfga2odA-ZPFKpIoCMvqH7XvugDaKVygD2bBHHRVR8Dn6x5IXiN5dbgH5dDW3E9Fiey_I0sdwMpJCTjV_LxzEHwToaoTqfeZoOsJILApyBp3uCxFqEYlBpGOg4DvjmNPDaKLgIEr-i_apKEjJp_qQ3B5PxyjQMJigrIZSN8n-r50tA7XRxdrX8QBnrp0yigy_tD-Gxu6yJyrcWRYfqZ80juu8=" target="_blank">링크</a></td></tr>
+                <tr><td>2025-08-08</td><td>Korea JoongAng Daily</td><td>Naver's AI push pays off in Q2 earnings</td><td><span class="score-badge-positive">+1</span></td><td>AI 전략과 커머스 성장에 힘입어 2분기 매출 및 영업이익이 전년 대비 증가.</td><td><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHGySsdfWNm1d3WVyonT2hNXOuVPPs-Tpm63TJvBSNsSclw8i7YQ1vcf1MQ3-ruHMgvlrJh8--qtUu_uf8ZwJI9eH5AB42vxbYZi7i4Q561w2I8POEmUKQKfBZGCkeDFMhR2kmKHIRk3dfouAYaX3v1nQ938pYvju0wMK-zie5pr8SRHXioXq6xERI1pDc2auc_5h96MqhVf3FSWdFHAAwEdGf0TjJNPna3rmuKc9sp_A==" target="_blank">링크</a></td></tr>
+                <tr><td>2025-09-25</td><td>Coin Edition</td><td>Naver to Acquire Upbit Operator Dunamu, Raising Stakes Against Kakao in South Korea</td><td><span class="score-badge-positive">+1</span></td><td>업비트 운영사 두나무 인수 추진으로 암호화폐 포트폴리오 강화 및 카카오와의 경쟁 심화.</td><td><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGjDWuOPMCX2t7R-C_tEkHfbY7M348eezYeKW1-ICzHqK3LSonRKTadg55h4ER3FLB4FVotbZflHkz-at9ZukLcHl7GrOveEBupI6F9lqvkApAB2N7A_BepRQ8s4KS9pKnRUEMkqI62PDYBGp0gbOUsuNRTbnfM01iXaNlvoUYA_pgRivB7DEs=" target="_blank">링크</a></td></tr>
+                <tr><td>2025-09-29</td><td>전자신문</td><td>[ET특징주]네이버, 두나무와 합병 기대감에 상승세</td><td><span class="score-badge-positive">+1</span></td><td>두나무와의 합병 기대감으로 주가 상승 및 장기적인 사업 성장 동력 확보.</td><td><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHqh_btDWnng2ofdmTdsSJ1g7h3972uvoqqSm3ABhpusoQGeNDO7xiz5CqjgUD_G-QDpJzpdSSRZKJQjIVDn2khtviV_uIDetaDjOeGVVj_I7w5bxMAjlvBWlVBLqj9q0qizTPn6vaeUDVoMrDYoq1j-GGjYu2CYXibkgn2ukLbJAe8hfqvKcfNw9vtphOKx7homWm1XYNI4DW7Avwgtnp-ZW7U2dHoialBjmygRTItzFImKyMGVSJPD92iBvjxstCpUj7QnYlbJg==" target="_blank">링크</a></td></tr>
+                <tr><td>2025-09-29</td><td>매일경제</td><td>'두나무 협력' 네이버, 3거래 연속 급등…'지분 보유' 한화투자증권도 11%↑</td><td><span class="score-badge-positive">+1</span></td><td>두나무와의 협력으로 주가 3거래일 연속 급등, 디지털 금융 서비스 확장 기대.</td><td><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEhjOv8Zx96YP_Me8NXf5addevlPpdMsS_zAss2FcNeNjqpK-tyfV7dOFq_MuFWuHxxuuw3LVj2ruMW_5751LZN-24r2HzuYTdN43wkIsMdMHIEVKdasVULwxT7Rnz_OrkoPM8=" target="_blank">링크</a></td></tr>
+                <tr><td>2025-08-04</td><td>TradingView</td><td>Naver Corp To Cancel 368 Billion Won Of Own Shares</td><td><span class="score-badge-positive">+1</span></td><td>3680억원 규모 자사주 소각 결정으로 주주가치 제고에 긍정적 영향.</td><td><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHGx5yrl0r1qGsKYjbUpkkp5jhbB_qCo_4abOa_UZSCQSj-9syyCpKhANxdg3HgCRVQMXgEtFxWg6HuHHLiQ67qgRabIrXsNqcWG1mlv1h82WmWrTuKeC8-B3SzkSmGDwmmwg2R2GdBZ_yG5cPLET2oHKqQyN2ucbvfifAj8c4F7GloeaEJLHieOEuPi2Z6tXYeiVNXwmbTnvqqUDAw6h5nAptFnHo0n0frK-DwVVzHBqKmyQ==" target="_blank">링크</a></td></tr>
+                <tr><td>2025-08-09</td><td>Investing.com Canada</td><td>NAVER Corp (XKRX:035420) Q2 2025 Earnings Call Highlights: Strong Revenue Growth Amidst Rising Costs</td><td><span class="score-badge-positive">+1</span></td><td>2분기 매출이 전년 대비 13.3% 증가하며 광고, 커머스, 핀테크 등 핵심 사업 성장.</td><td><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGq9r8eNmUhLmCCNGrtL2FQ4DktwACip8arxpGdVJJLDXT5GLLtZSgnRTOyYw4Qxyftu7ot2FDeFpV3c-CuR6mM70pWfBg7Npswu2cCMU1Atpw5Hx0ASN1ZuWZXbocJBOWsoN1mM45LYoYB0NrARYYxk08fAbLrIct3_LCiaOvmr6PdWQ6TZDEj1a2qVcvcuGohYSNpGGFF1fJBssVhgA1w_OfYGm2d-r87dOrJcDEtFURS6L8FVxN8QO3UfiIoNl0hsArSYPn9eDI4gdWmeso=" target="_blank">링크</a></td></tr>
+                <tr><td>2025-09-29</td><td>IB토마토</td><td>[IB토마토]증권가 초비상…네이버, 토스·카카오 뒤잇나</td><td><span class="score-badge-positive">+1</span></td><td>두나무 인수 및 금융업 확장 전략으로 새로운 경쟁자로 부상 가능성.</td><td><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEger2i-tSWGdw8jcw8HdcDHJMOhR3Vn3AflgGOWAp836hshYcA5fX0s4GBYGuQ83YXTRiEicu-1K9a1gFq1hOywVx4YM9A9JP6uZAhEJ68REg2g4uIZ5s0TGkxnapo-NjSNjMPq-jIypHHmvhcdQ==" target="_blank">링크</a></td></tr>
+            </tbody>
+        </table>
+
+        <h3 class="negative-header">부정적 뉴스 (-1)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>날짜</th>
+                    <th>출처</th>
+                    <th>뉴스 제목</th>
+                    <th>점수</th>
+                    <th>간단 근거</th>
+                    <th>링크</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>2025-09-30</td><td>뉴스1</td><td>나흘 만에 약세로 돌아선 네이버…차익 매물에 2.7%↓[핫종목]</td><td><span class="score-badge-negative">-1</span></td><td>단기 급등 이후 차익 실현 매물 출회로 주가 2.7% 하락.</td><td><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHfJOgvRycsLhAVJKknkyKD15HSmaMz0ePQj8o0k8aK289WgO-Dwk3Z7-CVBl2m-sV6r5DKkVpCj8c895mxRQrhINHuNsZGtbHx3-0p77EwhI86CS6char_CKtTkJdjtk-9HGKYsbUnMpykcJO4" target="_blank">링크</a></td></tr>
+                <tr><td>2025-09-22</td><td>Simply Wall St</td><td>The Returns On Capital At NAVER (KRX:035420) Don't Inspire Confidence</td><td><span class="score-badge-negative">-1</span></td><td>지난 5년간 자본수익률(ROCE)이 11%에서 6.6%로 감소하여 효율성 저하 우려.</td><td><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHu0Wqrq2Hg8jeXX8dqFpbT8zSx4vbY7d3yZuRF2DR5s2h_9d-fpPfi02qKHXjzUEemzWspYNK4wjYA2Uj29Q7hFGFtgWfQReNddHJWrAvjKDVbQZifEZxiTxOh5BWrGe6nShr0qrzYzOd9k0URGGbdKC3az51nzYKRqVLkXWvLQ5PRLI4Vf0RHzvB5t3mY5ngj0y5PLoWo3pWuIEh3Jlr8NxNHbmlX8ZPdiMEME3zsLS9JmidJBNhIJr5RcHA==" target="_blank">링크</a></td></tr>
+                <tr><td>2025-09-30</td><td>조선비즈</td><td>네이버 목표가 40만원까지… DS證 “가상자산 사업 결합하면 재평가 가능”</td><td><span class="score-badge-negative">-1</span></td><td>가상자산 사업 관련 규제 불확실성이 잠재적 리스크로 작용할 수 있다는 분석.</td><td><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQECXqWDDHO0QXc7V-2fU5N-wwfJK63HcA6vqHMrEJxcoiHuKJR78pH_q3vq7_aoNG0WKPQXZml6epx4gSaKZz3qkct789h_Z3fvZa8rEslk9H943dSYncxSjVzgDFyKbnoDLPqGnzf5BziIMzZhWU6oJInZLQXJPOgLi935gH2VRXdlVPFYSI7uvjtP1w==" target="_blank">링크</a></td></tr>
+                <tr><td>2025-09-29</td><td>Simply Wall St</td><td>NAVER Corporation's (KRX:035420) 28% Share Price Surge Not Quite Adding Up</td><td><span class="score-badge-negative">-1</span></td><td>높은 P/E 비율과 시장 대비 낮은 미래 EPS 성장률 전망으로 인한 과대평가 우려.</td><td><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFVwcJF6A2V5pXec3hcSB31Wqo0PkY49sCNGSxn_yHfmrIVM4H06wwHgfFtLshHpn2CtK0QFPtk-97mKJ-Uase7EQQacIn8EqdYtvI3GuemCtwIgbwj7va6OtFwaSAZeb8DeRU9T1Jvt1PiShvjZ9K7R2TbtmgGkaapqAEggwc4WDXy0Q97_R_ZTOlnJ6IskzZ15aTDSgctBS1cHI1pemspjLHjt9cRnCybr9b2f-n6vsnK5FoOmpQuQetelg==" target="_blank">링크</a></td></tr>
+            </tbody>
+        </table>
     </div>
 
 </body>
