@@ -3,137 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>삼성증권(016360) 향후 1개월 주가 예측</title>
+    <title>삼성증권 뉴스 분석</title>
     <style>
         body {
-            font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f4;
             margin: 0;
             padding: 20px;
+            background-color: #f4f7f6;
+            color: #333;
         }
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: auto;
-            background: #fff;
+            background: #ffffff;
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         h1, h2, h3 {
             color: #003366;
-            border-bottom: 2px solid #0056b3;
+            border-bottom: 2px solid #005f9e;
             padding-bottom: 10px;
+            margin-top: 30px;
         }
         h1 {
             text-align: center;
-            font-size: 2em;
+            font-size: 2.5em;
+            margin-bottom: 20px;
         }
-        .prediction-score {
-            text-align: center;
-            margin: 20px 0;
+        .summary {
+            background-color: #eaf5ff;
+            border-left: 5px solid #005f9e;
             padding: 20px;
-            background-color: #e6f7ff;
-            border-left: 5px solid #0056b3;
+            margin: 20px 0;
+            text-align: center;
+            border-radius: 5px;
         }
-        .score {
-            font-size: 4em;
+        .summary .score {
+            font-size: 2.5em;
             font-weight: bold;
-            color: #0056b3;
+            color: #003366;
         }
-        .score-desc {
+        .summary .details {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 15px;
             font-size: 1.2em;
-            color: #004085;
         }
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        li {
-            background: #f9f9f9;
-            margin-bottom: 10px;
-            padding: 15px;
-            border-radius: 5px;
-            border-left: 4px solid #17a2b8;
-        }
-        .factors-container {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
-        }
-        .bullish h3 { color: #28a745; border-bottom-color: #28a745; }
-        .bearish h3 { color: #dc3545; border-bottom-color: #dc3545; }
-        .bullish li { border-left-color: #28a745; }
-        .bearish li { border-left-color: #dc3545; }
-        .conclusion {
-            margin-top: 20px;
-            padding: 15px;
-            background-color: #f0f0f0;
-            border-radius: 5px;
-            text-align: justify;
+        .summary .positive {
+            color: #008000;
             font-weight: bold;
         }
-        .citation {
-            font-size: 0.8em;
-            color: #666;
+        .summary .negative {
+            color: #d90000;
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #003366;
+            color: white;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #e2eff9;
+        }
+        a {
+            color: #005f9e;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .positive-header { color: #008000; border-bottom-color: #008000; }
+        .negative-header { color: #d90000; border-bottom-color: #d90000; }
+        .score-badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 5px;
+            font-weight: bold;
+            color: white;
+            font-size: 0.9em;
+            margin-left: 5px;
+        }
+        .score-badge.positive {
+            background-color: #008000;
+        }
+        .score-badge.negative {
+            background-color: #d90000;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>삼성증권 (016360) 향후 1개월 주가 예측</h1>
+        <h1>삼성증권 최신 뉴스 분석 및 주가 영향 요약</h1>
 
-        <div class="prediction-score">
-            <div class="score-desc">예측 점수 (100점 만점)</div>
-            <div class="score">68</div>
-            <div class="score-desc">(100점: 완전 상승, 50점: 보합, 0점: 완전 하락)</div>
-        </div>
-
-        <h2>논리적 근거</h2>
-
-        <div class="factors-container">
-            <div class="bullish">
-                <h3>상승 요인 (Bullish Factors) ▲</h3>
-                <ul>
-                    <li>
-                        <strong>견조한 3분기 실적 전망 (2025-09-29):</strong> 증시 거래대금 회복세와 자산관리(WM) 부문의 꾸준한 고객자산 유입으로 시장 컨센서스를 상회하는 안정적인 3분기 실적이 예상됩니다.
-                    </li>
-                    <li>
-                        <strong>적극적인 주주환원 정책 기대감 (2025-06-24):</strong> '코리아 밸류업' 지수 편입과 더불어 중장기 배당성향 목표를 50%까지 확대할 계획을 밝혀, 업계 최고 수준의 주주환원 정책에 대한 기대감이 주가에 긍정적으로 작용하고 있습니다.
-                    </li>
-                    <li>
-                        <strong>매력적인 밸류에이션 (2025-08-11):</strong> 현재 주가순자산비율(PBR)이 0.87배 수준으로 업종 평균 대비 저평가 상태에 있어, 정부의 '밸류업 프로그램' 기조와 맞물려 저평가 매력이 부각될 가능성이 높습니다.
-                    </li>
-                    <li>
-                        <strong>외국인 및 기관의 꾸준한 매수세 (2025-09-29):</strong> 최근 외국인과 기관 투자자들의 동반 순매수세가 유입되며 수급 측면에서 긍정적인 흐름을 보이고 있습니다. 이는 주가 하방 경직성을 확보하고 상승 모멘텀을 강화하는 요인입니다.
-                    </li>
-                </ul>
-            </div>
-
-            <div class="bearish">
-                <h3>하락 및 리스크 요인 (Bearish/Risk Factors) ▼</h3>
-                <ul>
-                    <li>
-                        <strong>부동산 PF 관련 잠재 리스크 (2025-09-29):</strong> 증권업 전반적으로 부동산 프로젝트파이낸싱(PF)의 질적 개선이 이루어지고 있으나, 부동산 시장 침체 시 투자 심리 위축 및 잠재적 부실 우려가 여전히 존재합니다.
-                    </li>
-                    <li>
-                        <strong>대외 경제 불확실성 (2025-09-26):</strong> 글로벌 금리 정책의 불확실성과 환율 변동성 확대는 국내 증시의 변동성을 키울 수 있으며, 이는 브로커리지 수익 비중이 높은 증권사 실적에 부정적인 영향을 줄 수 있습니다.
-                    </li>
-                    <li>
-                        <strong>시장 경쟁 심화 (2025-09-24):</strong> 카카오 등 빅테크 기업들이 증권업에 진출하며 경쟁이 심화되고 있으며, 이는 장기적으로 수수료 수익에 압박 요인이 될 수 있습니다.
-                    </li>
-                </ul>
+        <div class="summary">
+            <h2>최종 점수: <span class="score">+6</span></h2>
+            <div class="details">
+                <span class="positive">긍정 뉴스: 10개 (71%)</span>
+                <span class="negative">부정 뉴스: 4개</span>
             </div>
         </div>
 
-        <div class="conclusion">
-            <h4>종합 의견</h4>
-            <p>
-                삼성증권은 안정적인 실적 전망과 업계 최고 수준의 주주환원 정책에 대한 기대를 바탕으로 긍정적인 주가 흐름이 예상됩니다. 특히 낮은 PBR은 정부의 밸류업 정책과 맞물려 주가 상승의 매력적인 요소로 작용합니다. 또한, 최근의 우호적인 수급 상황은 단기적인 주가 상승에 힘을 보탤 것으로 보입니다. 다만, 여전히 존재하는 부동산 PF 관련 리스크와 대외 거시경제의 불확실성은 주가에 부담으로 작용할 수 있는 변수입니다. 그럼에도 불구하고, 향후 1개월간은 저평가 매력과 주주가치 제고 노력이 리스크 요인을 상회하며 주가가 완만한 상승세를 보일 가능성이 높다고 판단됩니다.
-            </p>
-        </div>
+        <h3 class="positive-header">긍정적 뉴스 (+1)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>날짜</th>
+                    <th>출처</th>
+                    <th>뉴스 제목</th>
+                    <th>점수</th>
+                    <th>링크</th>
+                    <th>근거</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>2025-09-29</td><td>조선비즈</td><td>삼성증권, '엠팝' 해외 주식 화면 개편… AI 번역·요약 서비스 도입</td><td><span class="score-badge positive">+1</span></td><td><a href="https://www.chosunbiz.com/" target="_blank">링크</a></td><td>해외 주식 투자 편의성 및 AI 기반 정보 서비스 강화로 고객 경험 향상 기대.</td></tr>
+                <tr><td>2025-09-29</td><td>알파경제</td><td>삼성증권, MTS '엠팝' 전면 개편 “해외주식도 원스톱으로”</td><td><span class="score-badge positive">+1</span></td><td><a href="https://www.alphabiz.co.kr/" target="_blank">링크</a></td><td>모바일 트레이딩 시스템(MTS) 개편으로 해외 주식 서비스 경쟁력 강화.</td></tr>
+                <tr><td>2025-09-24</td><td>뉴스1</td><td>삼성證 "'카톡 개편' 카카오, 투자의견 '매수' 상향…광고 매출 기대"</td><td><span class="score-badge positive">+1</span></td><td><a href="https://www.news1.kr/" target="_blank">링크</a></td><td>삼성증권 애널리스트의 긍정적인 기업 분석 및 투자의견 상향으로 리서치 역량 부각.</td></tr>
+                <tr><td>2025-09-23</td><td>연합뉴스</td><td>삼성증권, 카카오 투자의견 상향…"콘텐츠 플랫폼으로 대전환"</td><td><span class="score-badge positive">+1</span></td><td><a href="https://www.yna.co.kr/" target="_blank">링크</a></td><td>카카오에 대한 긍정적 투자의견 제시로 시장 내 삼성증권의 영향력 및 분석 능력 강조.</td></tr>
+                <tr><td>2025-09-01</td><td>삼성자산운용</td><td>2025년 9월 국내외 주식시장 전망</td><td><span class="score-badge positive">+1</span></td><td><a href="https://www.samsungfund.com/" target="_blank">링크</a></td><td>삼성그룹 계열사의 긍정적인 시장 전망 발표로 투자 심리 개선 기대.</td></tr>
+                <tr><td>2025-08-04</td><td>삼성자산운용</td><td>2025년 8월 국내외 주식시장 전망</td><td><span class="score-badge positive">+1</span></td><td><a href="https://www.samsungfund.com/" target="_blank">링크</a></td><td>삼성그룹 계열사의 긍정적인 시장 전망 발표로 투자 심리 개선 기대.</td></tr>
+                <tr><td>2025-07-31</td><td>삼성증권</td><td>한국 주식시장전망과 전략 I 2025년 8월 I</td><td><span class="score-badge positive">+1</span></td><td><a href="https://www.samsungpop.com/" target="_blank">링크</a></td><td>삼성증권 자체 보고서에서 한국 증시 재평가 및 이익 모멘텀 강세 전망.</td></tr>
+                <tr><td>2025-07-01</td><td>삼성자산운용</td><td>2025년 7월 국내외 주식시장 전망</td><td><span class="score-badge positive">+1</span></td><td><a href="https://www.samsungfund.com/" target="_blank">링크</a></td><td>삼성그룹 계열사의 긍정적인 시장 전망 발표로 투자 심리 개선 기대.</td></tr>
+                <tr><td>2025-09-29</td><td>서울경제</td><td>'삼성생명·화재, 삼성전자 일부 지분 매각해야…배당 여력 증가할 것'[줍줍리포트]</td><td><span class="score-badge positive">+1</span></td><td><a href="https://www.sedaily.com/" target="_blank">링크</a></td><td>삼성그룹 금융 계열사의 배당 여력 증가 가능성으로 그룹 전반의 투자 매력도 상승.</td></tr>
+                <tr><td>2025-09-29</td><td>비즈니스포스트</td><td>삼성전자 자사주 소각 수순, 삼성생명 삼성화재 배당 확대로 주가 저점 다지나</td><td><span class="score-badge positive">+1</span></td><td><a href="https://www.businesspost.co.kr/" target="_blank">링크</a></td><td>삼성그룹 금융 계열사의 배당 확대 가능성으로 그룹 전반의 투자 심리 긍정적 영향.</td></tr>
+            </tbody>
+        </table>
+
+        <h3 class="negative-header">부정적 뉴스 (-1)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>날짜</th>
+                    <th>출처</th>
+                    <th>뉴스 제목</th>
+                    <th>점수</th>
+                    <th>링크</th>
+                    <th>근거</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>2025-08-10</td><td>Goover</td><td>삼성증권 2025년 상반기 실적 분석 및 투자 의견</td><td><span class="score-badge negative">-1</span></td><td><a href="https://goover.co.kr/" target="_blank">링크</a></td><td>2025년 상반기 영업이익 및 순이익 감소 발표로 실적 부진 우려.</td></tr>
+                <tr><td>2025-09-26</td><td>인포스탁데일리</td><td>[0926개장체크]美 증시, 금리 인하 기대감 약화되며 3대 지수 모두 하락</td><td><span class="score-badge negative">-1</span></td><td><a href="https://www.infostockdaily.co.kr/" target="_blank">링크</a></td><td>미국 증시 하락은 국내 증권사 실적에 부정적인 영향을 미칠 수 있음.</td></tr>
+                <tr><td>2025-09-24</td><td>인포스탁데일리</td><td>[0924개장체크]美 증시, 파월 의장 "증시 고평가" 발언에 하락</td><td><span class="score-badge negative">-1</span></td><td><a href="https://www.infostockdaily.co.kr/" target="_blank">링크</a></td><td>미국 증시 하락 요인 발생으로 시장 전반의 투자 심리 위축.</td></tr>
+                <tr><td>2025-09-23</td><td>인포스탁데일리</td><td>[0923마감체크] 코스피, 반도체주 강세에 3500선 눈앞... 코스닥은 하락</td><td><span class="score-badge negative">-1</span></td><td><a href="https://www.infostockdaily.co.kr/" target="_blank">링크</a></td><td>코스닥 시장 하락은 중소형주 거래 비중이 높은 증권사에 부정적 영향 가능성.</td></tr>
+            </tbody>
+        </table>
     </div>
 
 </body>
