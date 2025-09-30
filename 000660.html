@@ -3,137 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SK하이닉스(000660) 향후 1개월 주가 예측</title>
+    <title>SK하이닉스 뉴스 분석</title>
     <style>
         body {
-            font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f4;
             margin: 0;
             padding: 20px;
+            background-color: #f4f7f6;
+            color: #333;
         }
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: auto;
-            background: #fff;
+            background: #ffffff;
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         h1, h2, h3 {
             color: #003366;
-            border-bottom: 2px solid #0056b3;
+            border-bottom: 2px solid #005f9e;
             padding-bottom: 10px;
+            margin-top: 30px;
         }
         h1 {
             text-align: center;
-            font-size: 2em;
+            font-size: 2.5em;
+            margin-bottom: 20px;
         }
-        .prediction-score {
-            text-align: center;
-            margin: 20px 0;
+        .summary {
+            background-color: #eaf5ff;
+            border-left: 5px solid #005f9e;
             padding: 20px;
-            background-color: #e6f7ff;
-            border-left: 5px solid #0056b3;
+            margin: 20px 0;
+            text-align: center;
+            border-radius: 5px;
         }
-        .score {
-            font-size: 4em;
+        .summary .score {
+            font-size: 2.5em;
             font-weight: bold;
-            color: #0056b3;
+            color: #003366;
         }
-        .score-desc {
+        .summary .details {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 15px;
             font-size: 1.2em;
-            color: #004085;
         }
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        li {
-            background: #f9f9f9;
-            margin-bottom: 10px;
-            padding: 15px;
-            border-radius: 5px;
-            border-left: 4px solid #17a2b8;
-        }
-        .factors-container {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
-        }
-        .bullish h3 { color: #28a745; border-bottom-color: #28a745; }
-        .bearish h3 { color: #dc3545; border-bottom-color: #dc3545; }
-        .bullish li { border-left-color: #28a745; }
-        .bearish li { border-left-color: #dc3545; }
-        .conclusion {
-            margin-top: 20px;
-            padding: 15px;
-            background-color: #f0f0f0;
-            border-radius: 5px;
-            text-align: justify;
+        .summary .positive {
+            color: #008000;
             font-weight: bold;
         }
-        .citation {
-            font-size: 0.8em;
-            color: #666;
+        .summary .negative {
+            color: #d90000;
+            font-weight: bold;
         }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #003366;
+            color: white;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #e2eff9;
+        }
+        a {
+            color: #005f9e;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .positive-header { color: #008000; border-bottom-color: #008000; }
+        .negative-header { color: #d90000; border-bottom-color: #d90000; }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>SK하이닉스 (000660) 향후 1개월 주가 예측</h1>
+        <h1>SK하이닉스 최신 뉴스 분석 및 주가 영향 요약</h1>
 
-        <div class="prediction-score">
-            <div class="score-desc">예측 점수 (100점 만점)</div>
-            <div class="score">71</div>
-            <div class="score-desc">(100점: 완전 상승, 50점: 보합, 0점: 완전 하락)</div>
-        </div>
-
-        <h2>논리적 근거</h2>
-
-        <div class="factors-container">
-            <div class="bullish">
-                <h3>상승 요인 (Bullish Factors) ▲</h3>
-                <ul>
-                    <li>
-                        <strong>역대급 실적 전망 및 목표주가 상향:</strong> AI가 촉발한 메모리 슈퍼사이클로 3분기 영업이익이 사상 처음으로 10조 원을 돌파할 것이라는 전망이 나오고 있습니다. 이러한 기대감에 JP모건, KB증권 등 국내외 증권사들은 목표주가를 46만 원에서 최고 48만 원까지 상향 조정했습니다. (2025-09-25)
-                    </li>
-                    <li>
-                        <strong>HBM 시장의 압도적 지위 유지:</strong> 2025년 2분기 HBM 시장에서 출하량 기준 62%의 압도적인 점유율로 1위를 차지했습니다. 또한, 차세대 HBM4 시장에서도 60% 이상의 점유율로 주도권을 유지할 것이라는 전망이 나왔습니다. (2025-09-29)
-                    </li>
-                    <li>
-                        <strong>DRAM·NAND 동반 호황:</strong> HBM뿐만 아니라 범용 D램 가격이 가파르게 상승하고 있으며, 낸드플래시 부문에서도 평균판매가격(ASP)과 출하량이 예상을 상회하며 실적 개선을 이끌고 있습니다. (2025-09-28)
-                    </li>
-                    <li>
-                        <strong>강력한 외국인 수급:</strong> 9월 들어 외국인 투자자들이 SK하이닉스 주식을 집중적으로 순매수하며 주가 상승을 견인하고 있습니다. (2025-09-27)
-                    </li>
-                </ul>
-            </div>
-
-            <div class="bearish">
-                <h3>하락 및 리스크 요인 (Bearish/Risk Factors) ▼</h3>
-                <ul>
-                    <li>
-                        <strong>경쟁 심화 본격화:</strong> 삼성전자가 HBM3E 12단 제품에 대한 엔비디아의 품질 인증을 통과함에 따라 경쟁이 본격화될 전망입니다. 삼성전자는 2026년 HBM 시장 점유율을 30% 이상으로 확대할 계획이며, 마이크론 또한 추격의 고삐를 죄고 있습니다. (2025-09-24)
-                    </li>
-                    <li>
-                        <strong>단기 과열 및 차익 실현 우려:</strong> 최근 주가가 단기간에 급등함에 따라 밸류에이션 부담과 투자자들의 차익 실현 매물 출회 가능성이 존재합니다. 일부 글로벌 투자은행은 경쟁 심화로 인한 가격 하락 가능성을 제기하며 투자의견을 하향 조정하기도 했습니다. (2025-07-21)
-                    </li>
-                    <li>
-                        <strong>공급망 다변화 리스크:</strong> 최대 고객사인 엔비디아가 안정적인 공급망 확보를 위해 SK하이닉스 외에 삼성전자, 마이크론 등으로 HBM 공급사를 다변화할 가능성이 있습니다. (2025-09-28)
-                    </li>
-                </ul>
+        <div class="summary">
+            <h2>최종 점수: <span class="score">+19</span></h2>
+            <div class="details">
+                <span class="positive">긍정 뉴스: 19개</span>
+                <span class="negative">부정 뉴스: 0개</span>
             </div>
         </div>
 
-        <div class="conclusion">
-            <h4>종합 의견</h4>
-            <p>
-                SK하이닉스는 AI 메모리 슈퍼사이클의 핵심 수혜주로서 HBM 시장에서의 독보적인 지위를 바탕으로 3분기 사상 최대 실적을 기록할 것으로 예상됩니다. D램과 낸드 사업의 동반 호조와 외국인의 강력한 매수세 또한 단기 주가 전망을 밝게 합니다. 다만, 삼성전자의 HBM 시장 본격 진입으로 인한 경쟁 심화와 단기 급등에 따른 차익 실현 매물 출회 가능성은 부담 요인입니다. 그럼에도 불구하고, AI 시장의 구조적 성장세와 압도적인 실적 모멘텀이 경쟁 심화 우려를 상쇄하며 향후 1개월간 주가는 상승 추세를 이어갈 가능성이 높다고 판단됩니다.
-            </p>
-        </div>
+        <h3 class="positive-header">긍정적 뉴스 (+1)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>날짜</th>
+                    <th>출처</th>
+                    <th>뉴스 제목</th>
+                    <th>점수</th>
+                    <th>근거</th>
+                    <th>링크</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>2025-07-29</td><td>(주)유한 엠엔티</td><td>SK하이닉스, 2025년 HBM 수요에 힘입어 투자계획 30% 상향! 하이닉스의 과감한 'HBM 올인' 전략과 미래 청사진</td><td>+1</td><td>HBM 투자 확대 및 수요 증가로 인한 긍정적 전망.</td><td><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE3mjZYqzktBRbTXVfGxFatthH4O2vM8DLebfslAqwXsGfLBhujDCfbVIFX89TZ9DmpaidGwDBQXVYCWZSmabC8iJxLbL3g1a65LVILAEsIg0ctxP0Hyn4ZxZertr881lUuJrqzMBCIEs3dHqOXxSzmiuo_vUYyWTl_QIN7t2WGPin5NHvoJZxPx8mjVhIMKF_iRXHALOAUxnGSm59WuUUVRgXqV1vpe42UGLVsYv7TLmI5MvwPUhiWW0_UGnWDAC7Ctf8o2bkLp3NOZzZx7Z1ZkpoD2SBzUtT7TafXJILAZu57FJqNtukyY7HK_ysB9SOvvr0mLbUKRY58uznad2IZFVxjXUPJM9-N-9z5mo2esPT7Tg-cK49tjXmJKRPMlXAeZQx9JGhOXPGfj6-EwLppoFNu0AoVIc66DFI-bi_cfAtw0qfPECNnS2tKz7Pji--UxGW81DN4sN7tNjDAoU-wjTtv2dNXMTDJtwATVJ_QXDEg8bvVg_1kyL_1HClaA5byJUUyIoAuaY4RuY2vNG80tTnCooEzY5nZ2JqRo22h71VJxl_PsMR83QoRp9MBkzkFWmF5wQ==" target="_blank">링크</a></td></tr>
+                <tr><td>2025-07-24</td><td>조선비즈</td><td>[컨콜] SK하이닉스 “올해 시설투자 규모, HBM 장비 구비로 계획보다 증가”</td><td>+1</td><td>HBM 생산을 위한 시설 투자 증가로 미래 성장 기대.</td><td><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH-fu4LIQ16WY95lNMBG-HE_xzd3Bg2_RjL_qy-OCdeU-FnUzk0Bn76IBNmrNAFk878d0wGA3q-seu0vlsbMDXrGn8X9QvcbA44Qhlb3L1cwzKd1i07U6hZBLMra9l8cmsTZtGc9fV-eHyYjRG2Ujmla-VaII8pUIVUqugz-ItiV4HIGzrGWWU=" target="_blank">링크</a></td></tr>
+                <tr><td>2025-09-23</td><td>매일경제</td><td>“SK하이닉스, 3분기 낸드 기대 이상의 실적 전망”…목표가↑</td><td>+1</td><td>3분기 낸드 실적 호조 및 목표주가 상향 조정.</td><td><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFmlsn4PLmBqeESaUj1jyaoiK7JxSvzGcr2WdVkybsUt6UQsIZqbGMh7jLukIoseuFR4io0-8loyBcnXp3v05XDRcBy1JNRtgFCZl-SetokDO06pF89_Jv2ECLBVVh8Cy-wonE=" target="_blank">링크</a></td></tr>
+                <tr><td>2025-09-30</td><td>데이터뉴스</td><td>'낸드'까지 상승세…SK하이닉스, 3분기 영업이익률 45% 넘나</td><td>+1</td><td>HBM 및 낸드 수요 급증으로 3분기 높은 영업이익률 전망.</td><td><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHaHIg7S3WjzO8_Kt1hSiLK3SRBJx09SQqrZkZe36UI1jvOB94SoLCqrWtgSfghrVqSR_REkp_m7-VplV7UKI3ZiUFOP53lhGz3Cg_5IALBp5_Z4lE6qO_moj9d6IJZOfWa-JkWpXQ9MU4bogm7" target="_blank">링크</a></td></tr>
+                <tr><td>2025-09-25</td><td>thebell Free</td><td>SK하이닉스, HBM4 베이스다이 상향 조정</td><td>+1</td><td>HBM4 품질 인증 박차 및 기술 경쟁력 강화 노력.</td><td><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH5opUYRa45LKSpTv_ycX65nF5beeUWJKRxoPOnozo0PJvMrU1LVogv_E0W5Lkt6CF5Io8SK0UCya2700Tzu_gRkR8lvh1xkPl86imXw4lkJcqHzg3FPRC7WEfCtCYCv_zWwqqzI5qOkrYGgmFg_1yZqsD65g2UJKDVWYI62HQ5Gh4oOI8vbjY2B4OsqKbM" target="_blank">링크</a></td></tr>
+                <tr><td>2025-09-23</td><td>이투데이</td><td>IBK투자證 “SK하이닉스, 3분기 NAND 순풍⋯목표주가↑”</td><td>+1</td><td>3분기 낸드 실적 호조 및 목표주가 상향 조정.</td><td><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGsXvGnwatjejjSMJNHZ3VoQWSfis799pK3M94xi0xrfNXpJ9-psi6h4Auk_pa2FNwwulE9zFUM2qP0gFO9RTcG3uGvMZdWFZbDOHiONmZVhfVM7EicLTfI4IxzLfBWUlFoaafqNw==" target="_blank">링크</a></td></tr>
+                <tr><td>2025-09-29</td><td>Business Post</td><td>"SK하이닉스 HBM4 점유율 60% 이상" JP모간 전망, 삼성전자 마이크론에 우위</td><td>+1</td><td>HBM4 시장에서 SK하이닉스의 높은 점유율 전망.</td><td><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF2ACHPk5iBoUdNS3Huh5gjQxC6cUW2XAUe59f7MIr-PWbIyzN1yuoZ8TI80IVyQsSG7M2eUIFz-Q9MYes9tB3oaHGUyL7ju_iQwlVilCwt0OAn9SEO65ff6yG4Gw44-t1tmjyP0xx8rydNCNtedzbhKKelqMJIl-0cX2c=" target="_blank">링크</a></td></tr>
+                <tr><td>2025-09-26</td><td>스트레이트뉴스</td><td>SK하이닉스·삼성전자, '메모리 훈풍' 속 실적 기대감 상승…美·中 대비할 때</td><td>+1</td><td>메모리 가격 상승 및 수급 개선으로 2025년 사상 최대 실적 기대.</td><td><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF4qonpWCsJ7I2iIgnQqJngHbn0efmx6VjKVmqeMPiiBcuPlYYvjgPOjWQ7UXiceni9xFnGJQM3rMenQrSlwQw-TblyMq_u1YJ3W2ouYQqQkPgkiQAMDGBKrxOdkUqZ5_yB43JlzzGbwfxIOyxSKFaSjiv91scCn0dF-xUA" target="_blank">링크</a></td></tr>
+                <tr><td>2025-09-30</td><td>비즈니스포스트</td><td>신한투자 "SK하이닉스 목표주가 상향, D램과 낸드 동반 성장 시작"</td><td>+1</td><td>D램과 낸드 동반 성장 및 목표주가 상향 조정.</td><td><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF5N7IHYDSUkIN0GVqx1LCd0PwcTVNrn09cjjTfRjU4obLQTvjudA44QzPgBTBuFDHsvMH1F_iH2jqyV6XTxhd5lufgvzjn08URRfW89p81H8Hj574uKcP7v5VjtK241QhYCjH1E_puYMYEfrHXujU1oPbeZ8TZ5FlvCyPF" target="_blank">링크</a></td></tr>
+                <tr><td>2025-09-29</td><td>조선비즈</td><td>호황기 맞은 삼성전자·SK하이닉스, 3분기 실적 전망 상향… 디스플레이도 반등</td><td>+1</td><td>3분기 실적 전망 상향 및 메모리 시장 호황 기대.</td><td><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF4RqrwBVZNz5QgsKjTTJZqPr5WkYu2-rYB5ttPXwHyQ5cAjYsKN4if1E7urp8WKSqYtBAJfXCOA6wy4HXvJqc2_aAafKTs9jp13o5220q8bVQQodpTajahvmxj8GPxtgVRdYQPf648eSggNoeYth8YFRfrcHsuXOVLEPcZ6NOPPmes2TVLv4=" target="_blank">링크</a></td></tr>
+                <tr><td>2025-09-29</td><td>뉴데일리 경제</td><td>삼성·SK하이닉스, 메모리 슈퍼호황에 영업익 10조 시대 연다</td><td>+1</td><td>메모리 슈퍼사이클 도래 및 3분기 영업이익 10조원 돌파 전망.</td><td><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFTmuFk0RhyrN_xrdP357mckykuRbioe8b0nDXhTXcD7eHxAHK2v9LFqi3FU87WjMYBV8ChVNO6PcJiQztZ3RmKsN-uWshNp2KYhqVsNKTo6Uz2MBqhzcEzNcAL-cBqCgbasGTSMh6ooHzYvpCbiN92TwgDT0y3bkumazRtWMlpxqVd" target="_blank">링크</a></td></tr>
+                <tr><td>2025-09-28</td><td>매일신문</td><td>SK하이닉스 3분기 실적 눈 높아져…업종별 엇갈린 희비</td><td>+1</td><td>반도체 호황에 힘입어 3분기 실적 전망치 상향.</td><td><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEyG6HOkt_3OWDy5-ns5cCViyEObAmfFSMoO6wjjcgHFtw6U0fEsRSAq7Jv9DKCmjmUDH0Frd0N8L9laGQKHzCA9DGjaQDO_tM1KSRYExoHOIoTUE3JvFptaxPHkl6uYdCEXyEkJQ70blcqps6gAZo=" target="_blank">링크</a></td></tr>
+                <tr><td>2025-09-27</td><td>Daum</td><td>[청기홍기]'반도체의 봄'...삼전·SK하이닉스 목표가 또 상향</td><td>+1</td><td>메모리 업황 회복 및 3분기 어닝서프라이즈 기대, 목표가 상향.</td><td><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHxMASLkZ9G9JldU7xwxUcfKTH4u_cMBGOZqv51TkrCnepKEfvSacOKd3Q_nHE1jOkJMvKmpwKjaPQ3cwwK6GAxWbAnGv2j3_uCyCudCo_1VeTJ1649yLhIIHUmCaY4CKlI" target="_blank">링크</a></td></tr>
+                <tr><td>2025-09-30</td><td>실리콘 디코드</td><td>[실리콘 디코드] SK하이닉스·삼성·TSMC, HBM4 패권 경쟁…AI '메모리 월' 돌파 가속</td><td>+1</td><td>HBM4 기술 주도권 경쟁에서 SK하이닉스의 역할 부각, AI 반도체 시장 핵심 기술.</td><td><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGvl70jVKi9R73sKBH8XFKspPSR393aHAb6hidTFzJ6pogViz0lyTmFp7D2Jv_Gyth5qlgjZKa7veEZk_FmjGMSPuAZKliYAuoEnC5CLh0ca9TZ_XjQmtTagS2wYYg8yBdyE-lN4Lqptm5Yw59tlb9wLZTQIQEREsJMIbm7BJnNGdUw12V21vzO-FxG5Q==" target="_blank">링크</a></td></tr>
+                <tr><td>2025-09-30</td><td>한국경제</td><td>[마켓PRO] Today's Pick: "SK하이닉스, 주가 50만원 간다"</td><td>+1</td><td>메모리 호황 국면 진입 및 목표주가 50만원 상향 전망.</td><td><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFODubxw090laRrOma84bvUNlTiNHo7QG0uthyWFSxoII7zE8b2Z4_jux4Ije8kva8mMdBtDstrviLsItCynu98d9qsOg3A2IN6a6hnvK0zc-3YJf4YIMrLAXrS3eNS5sld_UF8YMAGkFA=" target="_blank">링크</a></td></tr>
+                <tr><td>2025-09-23</td><td>경제시그널</td><td>SK하이닉스는 HBM! 삼성은 레거시! 둘 다 떡상 간다? ㅣ2025년 9월 19일 경제시그널</td><td>+1</td><td>HBM 시장에서의 강점 및 AI 시장 확대에 따른 수요 증가.</td><td><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHVL1ZYIar-EQ5n3gTtOuZzEOsrr1s4Jm5Gi4XvjHGACqrUO4l4SPpOpZ3dF1-6nAfvdp9Z1-IQfqBNwesDREUxBjSoGmPt0tNjyvBMlDStvBpHy3Ie4972gMzBFrZc_IFxp5Y6cVo=" target="_blank">링크</a></td></tr>
+                <tr><td>2025-09-29</td><td>중앙일보</td><td>올해는 '따뜻한 겨울'?...AI발 '반도체 수퍼사이클' 전망에 SK·삼성 '들썩'</td><td>+1</td><td>AI발 반도체 슈퍼사이클 도래 및 실적 개선 기대.</td><td><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGAg56W85t5Ec0B05JoXxaaWXztLLsO8eytK2RbXbtW5gqjQTnPcX8l0_YxYM9MtfKmy3t1OzqRMmpgPXY0UqxDankLEAOrjhVf2guYeqzbbKoLj661zgcKWhQkeX9Fnzc3oxYaFB0=" target="_blank">링크</a></td></tr>
+                <tr><td>2025-09-20</td><td>채널A 뉴스</td><td>만년 2등에서 글로벌 1등이 된 'SK하이닉스'의 비결은? ㅣ2025년 9월 19일 경제시그널</td><td>+1</td><td>HBM 성공으로 인한 글로벌 리더십 강화 및 AI 수요 증가.</td><td><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHx1qe6H0laDDCdj2dKOSX3vcZTcn_Cr3bbczhOgkx29IZ-ex3PSGq963rZU5ISuPGHAuLbzrqdD3c68HJ7kgmqwbM36suzLFmyXgHBZAM-Gw9w28RJiTfRBAmpFPrRDCb3Ne5cfiI=" target="_blank">링크</a></td></tr>
+                <tr><td>2025-09-25</td><td>thebell Free</td><td>[Red & Blue]SK스퀘어, SK하이닉스 훈풍·상법 개정 흐름 탑승</td><td>+1</td><td>SK하이닉스 실적 호조에 따른 SK스퀘어 동반 성장 기대.</td><td><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFGZQKUdWYGhOHHp6Li8JI8ojXaOUgi2iUf3IEXcDDhzlkLPZCGZKnhb_fHgFC7-1-z4qLh36B5J26fzS2k8kJGpuhgXyQ-Rgx6P3MIsPGITqWkg-bLt-DkHfybkqhYdAukgLOTB9LIeK3pXb7p9CoHDD-fodeCZBU8icnXgqEN74nRnuHFod6rtHnUAFdv" target="_blank">링크</a></td></tr>
+            </tbody>
+        </table>
+
+        <h3 class="negative-header">부정적 뉴스 (-1)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>날짜</th>
+                    <th>출처</th>
+                    <th>뉴스 제목</th>
+                    <th>점수</th>
+                    <th>근거</th>
+                    <th>링크</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 부정적 뉴스가 없습니다. -->
+            </tbody>
+        </table>
     </div>
 
 </body>
