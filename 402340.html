@@ -3,140 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SK스퀘어(402340) 향후 1개월 주가 예측</title>
+    <title>SK스퀘어 뉴스 분석</title>
     <style>
         body {
-            font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f4;
             margin: 0;
             padding: 20px;
+            background-color: #f4f7f6;
+            color: #333;
         }
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: auto;
-            background: #fff;
+            background: #ffffff;
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         h1, h2, h3 {
             color: #003366;
-            border-bottom: 2px solid #0056b3;
+            border-bottom: 2px solid #005f9e;
             padding-bottom: 10px;
+            margin-top: 30px;
         }
         h1 {
             text-align: center;
-            font-size: 2em;
+            font-size: 2.5em;
+            margin-bottom: 20px;
         }
-        .prediction-score {
-            text-align: center;
-            margin: 20px 0;
+        .summary {
+            background-color: #eaf5ff;
+            border-left: 5px solid #005f9e;
             padding: 20px;
-            background-color: #e6f7ff;
-            border-left: 5px solid #0056b3;
+            margin: 20px 0;
+            text-align: center;
+            border-radius: 5px;
         }
-        .score {
-            font-size: 4em;
+        .summary .score {
+            font-size: 2.5em;
             font-weight: bold;
-            color: #0056b3;
+            color: #003366;
         }
-        .score-desc {
+        .summary .details {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 15px;
             font-size: 1.2em;
-            color: #004085;
         }
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        li {
-            background: #f9f9f9;
-            margin-bottom: 10px;
-            padding: 15px;
-            border-radius: 5px;
-            border-left: 4px solid #17a2b8;
-        }
-        .factors-container {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
-        }
-        .bullish h3 { color: #28a745; border-bottom-color: #28a745; }
-        .bearish h3 { color: #dc3545; border-bottom-color: #dc3545; }
-        .bullish li { border-left-color: #28a745; }
-        .bearish li { border-left-color: #dc3545; }
-        .conclusion {
-            margin-top: 20px;
-            padding: 15px;
-            background-color: #f0f0f0;
-            border-radius: 5px;
-            text-align: justify;
+        .summary .positive {
+            color: #008000;
             font-weight: bold;
         }
-        .citation {
-            font-size: 0.8em;
-            color: #666;
+        .summary .negative {
+            color: #d90000;
+            font-weight: bold;
         }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #003366;
+            color: white;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #e2eff9;
+        }
+        a {
+            color: #005f9e;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .positive-header { color: #008000; border-bottom-color: #008000; }
+        .negative-header { color: #d90000; border-bottom-color: #d90000; }
+        .score-badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            font-weight: bold;
+            color: white;
+            margin-left: 5px;
+        }
+        .score-badge.positive { background-color: #008000; }
+        .score-badge.negative { background-color: #d90000; }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>SK스퀘어 (402340) 향후 1개월 주가 예측</h1>
+        <h1>SK스퀘어 최신 뉴스 분석 및 주가 영향 요약</h1>
 
-        <div class="prediction-score">
-            <div class="score-desc">예측 점수 (100점 만점)</div>
-            <div class="score">72</div>
-            <div class="score-desc">(100점: 완전 상승, 50점: 보합, 0점: 완전 하락)</div>
-        </div>
-
-        <h2>논리적 근거</h2>
-
-        <div class="factors-container">
-            <div class="bullish">
-                <h3>상승 요인 (Bullish Factors) ▲</h3>
-                <ul>
-                    <li>
-                        <strong>SK하이닉스 실적 호조에 따른 지분가치 상승:</strong> SK하이닉스의 HBM(고대역폭 메모리) 시장 독주로 인한 사상 최대 실적 전망은 SK스퀘어의 순자산가치(NAV) 동반 상승을 견인하는 가장 강력한 요인입니다. 2025년 2분기 SK스퀘어의 영업이익과 순이익은 SK하이닉스 실적 호조에 힘입어 전년 동기 대비 약 2배 증가했습니다. (2025-08-14)
-                    </li>
-                    <li>
-                        <strong>적극적인 주주환원 정책:</strong> 2000억원 규모의 자사주 추가 매입 및 소각 계획을 발표하는 등 적극적인 주주환원 정책은 기업가치 제고에 대한 긍정적 신호를 시장에 보내고 있습니다. (2024-11-21) 또한, SK하이닉스의 배당 확대로 SK스퀘어의 현금 유입이 증가하여 추가적인 주주환원 정책에 대한 기대감을 높이고 있습니다. (2025-09-02)
-                    </li>
-                    <li>
-                        <strong>자회사들의 실적 개선 및 포트폴리오 재편:</strong> 11번가, 티맵모빌리티 등 주요 자회사들의 수익성이 개선되고 있으며, 비핵심자산 유동화를 통해 확보한 현금으로 AI 및 반도체 분야에 대한 신규 투자를 진행하고 있어 미래 성장 동력을 확보하고 있습니다. 티맵모빌리티는 2025년 2분기에 최초로 EBITDA 흑자를 달성했습니다. (2025-08-14)
-                    </li>
-                    <li>
-                        <strong>증권사들의 긍정적 전망 및 목표주가 상향:</strong> 다수의 증권사들이 SK하이닉스의 가치 상승과 SK스퀘어의 기업가치 제고 노력을 반영하여 목표주가를 상향 조정하고 있습니다.
-                    </li>
-                </ul>
-            </div>
-
-            <div class="bearish">
-                <h3>하락 및 리스크 요인 (Bearish/Risk Factors) ▼</h3>
-                <ul>
-                    <li>
-                        <strong>SK하이닉스에 대한 높은 의존도:</strong> 순자산가치(NAV)의 대부분이 SK하이닉스 지분 가치에 집중되어 있어, 반도체 업황 변동이나 SK하이닉스 주가 하락 시 SK스퀘어 주가도 직접적인 영향을 받는 구조적 리스크가 존재합니다. (2025-09-26)
-                    </li>
-                    <li>
-                        <strong>자회사 IPO 지연 가능성:</strong> 11번가, 원스토어 등 주요 비상장 자회사들의 기업공개(IPO) 일정이 지연될 경우, 기업가치 재평가에 대한 기대감이 약화될 수 있습니다.
-                    </li>
-                    <li>
-                        <strong>수급 변동성:</strong> 최근 주가 상승에 따라 기관 및 외국인 투자자들의 차익 실현 매물이 출회될 가능성이 있으며, 이는 단기적인 주가 조정 요인으로 작용할 수 있습니다. (2025-07-17)
-                    </li>
-                     <li>
-                        <strong>지배구조 관련 불확실성:</strong> SK그룹의 지배구조 개편과 관련된 불확실성은 잠재적인 리스크 요인으로 남아있습니다.
-                    </li>
-                </ul>
+        <div class="summary">
+            <h2>최종 점수: <span class="score">+7</span></h2>
+            <div class="details">
+                <span class="positive">긍정 뉴스: 10개 (77%)</span>
+                <span class="negative">부정 뉴스: 3개 (23%)</span>
             </div>
         </div>
 
-        <div class="conclusion">
-            <h4>종합 의견</h4>
-            <p>
-                SK스퀘어는 핵심 자회사인 SK하이닉스의 전례 없는 호황에 힘입어 강력한 실적 성장과 순자산가치 증대가 예상됩니다. 적극적인 자사주 매입 및 소각 정책과 자회사들의 실적 개선 또한 주가에 긍정적인 모멘텀으로 작용할 것입니다. SK하이닉스에 대한 높은 의존도는 분명한 리스크 요인이지만, 단기적으로 반도체 슈퍼사이클이 지속될 가능성이 높아 그 영향은 제한적일 것으로 보입니다. 이러한 펀더멘털 개선과 주주가치 제고 노력을 종합적으로 고려할 때, 향후 1개월간 SK스퀘어의 주가는 상승 추세를 이어갈 가능성이 높다고 판단됩니다.
-            </p>
-        </div>
+        <h3 class="positive-header">긍정적 뉴스 (+1)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>날짜</th>
+                    <th>출처</th>
+                    <th>뉴스 제목</th>
+                    <th>근거</th>
+                    <th>링크</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>2025-09-26</td><td>헤럴드경제</td><td>“화끈하게 태우고, 통 크게 쏜다!”…수익률 140% 찍고 불기둥 세운 이곳 <span class="score-badge positive">+1</span></td><td>높은 수익률 기록 및 주가 상승 기대.</td><td><a href="https://www.heraldcorp.com/" target="_blank">링크</a></td></tr>
+                <tr><td>2025-09-25</td><td>thebell</td><td>[Red & Blue]SK스퀘어, SK하이닉스 훈풍·상법 개정 흐름 탑승 <span class="score-badge positive">+1</span></td><td>자회사 SK하이닉스 호조 및 상법 개정 기대감.</td><td><a href="https://www.thebell.co.kr/free/content/ArticleView.asp?key=202509251410052770104533" target="_blank">링크</a></td></tr>
+                <tr><td>2025-09-19</td><td>서울경제TV</td><td>"자회사 실적 호조·적극적 주주환원" SK스퀘어 더 멀리 간다! <span class="score-badge positive">+1</span></td><td>자회사 실적 개선과 주주환원 정책 강화.</td><td><a href="https://www.youtube.com/watch?v=example" target="_blank">링크</a></td></tr>
+                <tr><td>2025-09-17</td><td>한국경제TV</td><td>SK스퀘어, 이달 남은 685억 자사주 집중 매입 <span class="score-badge positive">+1</span></td><td>자사주 매입을 통한 주가 부양 및 주주가치 제고.</td><td><a href="https://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202509170638" target="_blank">링크</a></td></tr>
+                <tr><td>2025-09-02</td><td>블로터</td><td>현금 쌓는 SK스퀘어, 주주환원·신규 투자 실탄 확보 '분주' <span class="score-badge positive">+1</span></td><td>풍부한 현금으로 주주환원 및 신규 투자 기대.</td><td><a href="https://www.bloter.net/news/articleView.html?idxno=621746" target="_blank">링크</a></td></tr>
+                <tr><td>2025-08-25</td><td>한국경제</td><td>SK스퀘어, 자회사 주가 상승·적극적 주주환원 긍정적…목표가↑-NH <span class="score-badge positive">+1</span></td><td>자회사 가치 상승 및 주주환원 정책에 대한 긍정적 평가.</td><td><a href="https://www.hankyung.com/finance/article/2025082587526" target="_blank">링크</a></td></tr>
+                <tr><td>2025-08-25</td><td>이데일리</td><td>SK스퀘어, 자회사 가치 상승·주주환원 기대에 3%↑[특징주] <span class="score-badge positive">+1</span></td><td>자회사 가치 상승 및 주주환원 기대로 주가 상승.</td><td><a href="https://www.edaily.co.kr/" target="_blank">링크</a></td></tr>
+                <tr><td>2025-08-25</td><td>상한가 장대양봉 블로그</td><td>SK스퀘어 주가 전망｜배당·배당금·목표주가 총정리 <span class="score-badge positive">+1</span></td><td>배당 및 목표주가 긍정적 전망.</td><td><a href="https://stock-specialist.com/entry/SK-Square-Stock-Price-Dividend-Forecast" target="_blank">링크</a></td></tr>
+                <tr><td>2025-08-15</td><td>뉴스1</td><td>SK스퀘어, 2분기 영업이익 1조4011억…전년比 2배 <span class="score-badge positive">+1</span></td><td>2분기 실적 호조로 기업 가치 상승.</td><td><a href="https://www.news1.kr/articles/?5525542" target="_blank">링크</a></td></tr>
+                <tr><td>2025-08-14</td><td>연합인포맥스</td><td>SK스퀘어, 2분기 영업이익 1.4조·81%↑…"신규 투자 준비" <span class="score-badge positive">+1</span></td><td>2분기 실적 대폭 개선 및 신규 투자 기대.</td><td><a href="https://news.einfomax.co.kr/news/articleView.html?idxno=4359487" target="_blank">링크</a></td></tr>
+            </tbody>
+        </table>
+
+        <h3 class="negative-header">부정적 뉴스 (-1)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>날짜</th>
+                    <th>출처</th>
+                    <th>뉴스 제목</th>
+                    <th>근거</th>
+                    <th>링크</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>2025-09-26</td><td>비즈니스포스트</td><td>[오늘의 주목주] '하이닉스 주가 내리자' SK스퀘어 7%대 하락 <span class="score-badge negative">-1</span></td><td>자회사 SK하이닉스 주가 하락에 따른 동반 하락.</td><td><a href="https://www.businesspost.co.kr/BP?command=article_view&num=431699" target="_blank">링크</a></td></tr>
+                <tr><td>2025-07-14</td><td>나남뉴스</td><td>"1억 넣었는데 3억됐다" SK스퀘어 주가, 폭등하다 '날벼락' 투자 전망분석 <span class="score-badge negative">-1</span></td><td>주가 폭등 후 급락 가능성 시사.</td><td><a href="https://www.naman.kr/news/articleView.html?idxno=3839" target="_blank">링크</a></td></tr>
+                <tr><td>2025-07-10</td><td>조선비즈</td><td>카카오, SK스퀘어 지분 블록딜 추진… 최대 4200억원 규모 <span class="score-badge negative">-1</span></td><td>대규모 지분 매각 추진으로 인한 주가 희석 우려.</td><td><a href="https://biz.chosun.com/stock/market_trend/2025/07/10/72P3LADKCRFWFMC6V4PDS23YII/" target="_blank">링크</a></td></tr>
+            </tbody>
+        </table>
     </div>
 
 </body>
