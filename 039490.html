@@ -3,140 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>키움증권(039490) 향후 1개월 주가 예측</title>
+    <title>키움증권 뉴스 분석</title>
     <style>
         body {
-            font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f4;
             margin: 0;
             padding: 20px;
+            background-color: #f4f7f6;
+            color: #333;
         }
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: auto;
-            background: #fff;
+            background: #ffffff;
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         h1, h2, h3 {
             color: #003366;
-            border-bottom: 2px solid #0056b3;
+            border-bottom: 2px solid #005f9e;
             padding-bottom: 10px;
+            margin-top: 30px;
         }
         h1 {
             text-align: center;
-            font-size: 2em;
+            font-size: 2.5em;
+            margin-bottom: 20px;
         }
-        .prediction-score {
-            text-align: center;
-            margin: 20px 0;
+        .summary {
+            background-color: #eaf5ff;
+            border-left: 5px solid #005f9e;
             padding: 20px;
-            background-color: #e6f7ff;
-            border-left: 5px solid #0056b3;
+            margin: 20px 0;
+            text-align: center;
+            border-radius: 5px;
         }
-        .score {
-            font-size: 4em;
+        .summary .score {
+            font-size: 2.5em;
             font-weight: bold;
-            color: #0056b3;
+            color: #003366;
         }
-        .score-desc {
+        .summary .details {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 15px;
             font-size: 1.2em;
-            color: #004085;
         }
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        li {
-            background: #f9f9f9;
-            margin-bottom: 10px;
-            padding: 15px;
-            border-radius: 5px;
-            border-left: 4px solid #17a2b8;
-        }
-        .factors-container {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
-        }
-        .bullish h3 { color: #28a745; border-bottom-color: #28a745; }
-        .bearish h3 { color: #dc3545; border-bottom-color: #dc3545; }
-        .bullish li { border-left-color: #28a745; }
-        .bearish li { border-left-color: #dc3545; }
-        .conclusion {
-            margin-top: 20px;
-            padding: 15px;
-            background-color: #f0f0f0;
-            border-radius: 5px;
-            text-align: justify;
+        .summary .positive {
+            color: #008000;
             font-weight: bold;
         }
-        .citation {
-            font-size: 0.8em;
-            color: #666;
+        .summary .negative {
+            color: #d90000;
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #003366;
+            color: white;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #e2eff9;
+        }
+        a {
+            color: #005f9e;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .positive-header { color: #008000; border-bottom-color: #008000; }
+        .negative-header { color: #d90000; border-bottom-color: #d90000; }
+        .score-badge.positive {
+            background-color: #e6ffe6;
+            color: #008000;
+            border: 1px solid #008000;
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 0.9em;
+            margin-left: 5px;
+        }
+        .score-badge.negative {
+            background-color: #ffe6e6;
+            color: #d90000;
+            border: 1px solid #d90000;
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 0.9em;
+            margin-left: 5px;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>키움증권 (039490) 향후 1개월 주가 예측</h1>
+        <h1>키움증권 최신 뉴스 분석 및 주가 영향 요약</h1>
 
-        <div class="prediction-score">
-            <div class="score-desc">예측 점수 (100점 만점)</div>
-            <div class="score">63</div>
-            <div class="score-desc">(100점: 완전 상승, 50점: 보합, 0점: 완전 하락)</div>
-        </div>
-
-        <h2>논리적 근거</h2>
-
-        <div class="factors-container">
-            <div class="bullish">
-                <h3>상승 요인 (Bullish Factors) ▲</h3>
-                <ul>
-                    <li>
-                        <strong>견조한 실적 및 증시 회복 수혜:</strong> 증시 회복세에 따라 거래대금이 증가하면서 브로커리지 중심의 수익 구조가 강점으로 부각되고 있습니다. 2025년 1분기 지배순이익은 2,353억 원으로 시장 컨센서스를 상회했으며, 운용손익 부문이 특히 견조한 실적을 보였습니다. (2025-05-01)
-                    </li>
-                    <li>
-                        <strong>적극적인 주주환원 정책:</strong> 2025년까지 별도 당기순이익 기준 주주환원율 30% 이상을 유지하고, 보유 자사주를 3년에 걸쳐 전량 소각하기로 하는 등 예측 가능한 주주친화정책을 발표하여 투자자 신뢰 회복에 나서고 있습니다. (2025-06-05)
-                    </li>
-                    <li>
-                        <strong>밸류에이션 매력 및 목표주가 상향:</strong> 높은 자기자본이익률(ROE)에도 불구하고 주가순자산비율(PBR)은 여전히 저평가 상태에 있다는 분석이 있습니다. 다수 증권사들이 거래대금 증가와 실적 개선을 예상하며 목표주가를 상향 조정하고 있습니다. (2025-06-24)
-                    </li>
-                    <li>
-                        <strong>신사업 기대감:</strong> 리테일 경쟁력을 바탕으로 하반기 발행어음 인가 승인 시 빠른 성장이 기대되며, 이는 새로운 성장 동력이 될 수 있습니다. (2025-06-24) 또한 우량자산 위주로 부동산 금융 사업을 확대하며 포트폴리오 다각화를 꾀하고 있습니다.
-                    </li>
-                </ul>
-            </div>
-
-            <div class="bearish">
-                <h3>하락 및 리스크 요인 (Bearish/Risk Factors) ▼</h3>
-                <ul>
-                    <li>
-                        <strong>사법 리스크 및 인허가 불확실성:</strong> 김익래 전 회장 관련 사법 리스크가 발행어음 사업 인가 심사에 부정적 변수로 작용할 수 있습니다. 대주주 관련 이슈는 금융당국의 인허가 심사 보류 사유가 될 수 있어 신사업 추진에 차질이 생길 우려가 있습니다. (2025-09-22)
-                    </li>
-                    <li>
-                        <strong>CFD 사태 관련 잠재적 비용:</strong> 과거 CFD(차액결제거래) 사태와 관련된 미수금 및 충당금 이슈는 여전히 잠재적인 재무 부담 요인으로 남아있습니다.
-                    </li>
-                    <li>
-                        <strong>반복되는 전산 장애 문제:</strong> 온라인 중개 시장의 높은 점유율에도 불구하고 반복되는 전산 장애 및 민원 증가는 투자자 신뢰도를 저해하는 요인으로, 핵심 경쟁력을 약화시킬 수 있습니다. (2025-09-25)
-                    </li>
-                     <li>
-                        <strong>높아진 PBR 부담:</strong> 정부의 밸류업 프로그램과 주주환원 정책에 대한 기대로 주가가 상승하며 PBR이 1배를 넘어서면서, 일부에서는 추가 상승 여력이 둔화되었다는 분석도 제기되고 있습니다. (2025-07-25)
-                    </li>
-                </ul>
+        <div class="summary">
+            <h2>최종 점수: <span class="score">+10</span></h2>
+            <div class="details">
+                <span class="positive">긍정 뉴스: 10개</span>
+                <span class="negative">부정 뉴스: 0개</span>
             </div>
         </div>
 
-        <div class="conclusion">
-            <h4>종합 의견</h4>
-            <p>
-                키움증권은 증시 거래대금 회복의 최대 수혜주로서 견조한 실적을 보이고 있으며, 적극적인 주주환원 정책은 주가에 긍정적인 요소입니다. 또한, 저평가 매력과 발행어음 등 신사업에 대한 기대감도 유효합니다. 하지만 대주주 관련 사법 리스크가 신사업 인허가에 중대한 불확실성으로 작용하고 있으며, 과거 CFD 사태의 여진과 반복적인 전산 장애 문제도 신뢰도 측면에서 부담입니다. 단기적으로는 실적 호조와 주주환원 기대감이 주가를 지지하겠으나, 사법 리스크의 전개 방향이 향후 1개월 주가의 핵심 변수가 될 것으로 보입니다. 따라서 리스크와 기회 요인이 혼재된 상황으로, 변동성을 동반한 제한적인 상승을 보일 가능성이 있다고 판단됩니다.
-            </p>
-        </div>
+        <h3 class="positive-header">긍정적 뉴스 (+1)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>날짜</th>
+                    <th>출처</th>
+                    <th>뉴스 제목</th>
+                    <th>링크</th>
+                    <th>근거</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>2025-09-30</td><td>이데일리</td><td>키움증권, '주식 더 모으기' 20만명 돌파…"투자 효능감 입증" <span class="score-badge positive">+1</span></td><td><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFuRIuM33MNCScxvKnKTV666DWueA8x6isFE-8e79QqXcUCNBVBMJuH_sAb8ORgPUhgv2KMuXDkDlPtLrAqnNboloIaE25eHNZ0YU8FVyNep0G9N-Bnky8FQ0mHdURWB_oDwiNh42REi_ZgzNMRZuafQ4U1-QcnvE05MYbS2YNUrkJ_TOlD7g==" target="_blank">링크</a></td><td>서비스 이용자 증가로 인한 실적 및 시장 점유율 기대.</td></tr>
+                <tr><td>2025-09-30</td><td>연합뉴스</td><td>키움증권, 적립식 투자 '주식 더 모으기' 이용자 20만명 돌파 <span class="score-badge positive">+1</span></td><td><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEqKq014E9iLgmWGUBlaZLegjlm66l1mlzXmynYk10APKdff2SGYN46taol0pX-mmzMwTN2y5WtkilyhhPoYo0MCgBYp9-VDhpNBV2oLNzeNW69AQR5z6krCZH0Vvj--WeW6zD7UopW9jdu" target="_blank">링크</a></td><td>서비스 이용자 증가로 인한 실적 및 시장 점유율 기대.</td></tr>
+                <tr><td>2025-09-30</td><td>Investing.com</td><td>키움증권 주식 배당 기록 <span class="score-badge positive">+1</span></td><td><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF_F8WmzLRj--A-CcSKfOR3Zd2lW-fPhKyxK5Mz0UoY850XlkKTeuCapjGSwR9j0m7HnB6JAgpK61P--5jIwhgqFIbrzI2-j8E2OWBUR12mJOic2EJ28n2MTzKxcIpivEzuF8BUzlVp538E4R67" target="_blank">링크</a></td><td>높은 배당금 및 5년 배당성장률이 긍정적.</td></tr>
+                <tr><td>2025-09-30</td><td>한국정경신문</td><td>키움증권, '주식 더 모으기' 누적 이용자 7개월만에 20만명 돌파 <span class="score-badge positive">+1</span></td><td><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGicosLdkdbu-vOeV3mxzocbwVJOtlSijRRLWRQxU1Xs4U6n8L9NwTAlhO6tYcwjd-a3-zPM5JiUrWiMe9z4svcsyC5vXIOepo5T5rrige9G2B5pyOY71MlIc7ax_bswtwlA2c=" target="_blank">링크</a></td><td>서비스 이용자 증가로 인한 실적 및 시장 점유율 기대.</td></tr>
+                <tr><td>2025-09-30</td><td>데이터투자</td><td>증권株 반등 신호탄…키움 25% 폭등에 "KOSPI 4,000pt 시대 온다" <span class="score-badge positive">+1</span></td><td><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHwq4Y5Ce18mKCjqt5zCs4FAFspr3Cv9OA_1nShszzEoZQX8gGC1Ta5tVsfKhZjJ2m4k3B138TBBdqfoosSGQa_07LcIAiap67MMVQZSB7hgJyQxygshLiQN7u10ZuAmw66KQOPwBp2A5kO7-GCvuQJwLfFE5NYTGggoYnv" target="_blank">링크</a></td><td>9월 국내 증시 거래대금 증가 및 증권업종 반등 속 키움증권 주가 강세.</td></tr>
+                <tr><td>2025-09-30</td><td>매일경제</td><td>“재미 좀 보고 일단 빠졌다”…다시 들어갈 타이밍 재는 개미, 대기자금 75조 <span class="score-badge positive">+1</span></td><td><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE5n4tDodg39mWw06SoFGhVOijvTULH0TVANK5Q7zb1BPlivXcV9_Uygc_NTm0M7d6JNpcro_Gq57VOKB4eAbLA5o7cYtJiT5mSLh7mh6NLxzB5SlJTRYyd0RnE-mY7RFkygzc=" target="_blank">링크</a></td><td>증시 대기자금 증가 및 키움증권의 경쟁력 강화 노력 언급.</td></tr>
+                <tr><td>2025-09-30</td><td>조선비즈</td><td>키움증권, '주식 더 모으기' 20만명 돌파 <span class="score-badge positive">+1</span></td><td><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH8TlUiAXAzxEPH9s6sKvIrS34toYJk2_0j6dgpGt5SLks3Ul65WWPfkQx1xGB8eecquSSaVEgIjI_knSv3ysAwdC86DYfdva6CfctU2f8uxnrnJLu2bJf-1NN5kh5Ap1nHaoJWrUIaMVJ_-w2Aeq2XgMYdPmzd7Zi4mWEVhGnFWRhtBUntNlQ0bauYYA==" target="_blank">링크</a></td><td>서비스 이용자 증가로 인한 실적 및 시장 점유율 기대.</td></tr>
+                <tr><td>2025-09-30</td><td>뉴데일리 경제</td><td>키움증권 '주식 더 모으기', 출시 7개월 만에 20만명 돌파 <span class="score-badge positive">+1</span></td><td><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFyjfowYP8a5AoeamJ6pNc2M_YzF7DeKkg2f9y4LEnwm4LGVwvaTbZCS5rH0h281crxln8E-PniiKHG5TM85R3iAd7Vmu0oTXufK4jOWq5Se8FtRolsStrK-XaDOFDtauWHwiORSvyq89GnG8BeoCytVBb4FJEXz6wSNPd5vJjQvwVT" target="_blank">링크</a></td><td>서비스 이용자 증가로 인한 실적 및 시장 점유율 기대.</td></tr>
+                <tr><td>2025-09-30</td><td>라이센스뉴스</td><td>키움증권, '주식 더 모으기' 7개월 만에 20만명 돌파 <span class="score-badge positive">+1</span></td><td><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGpZbXl5zCX0zwxmUzGf2rLo--sLRznLbyyePv4FvfvQQF99S1lG2P78t3c6udnnswAWfyOfznrt5zbw6F-UxWCTcy0eC7-kKBSfmMNi5YEn3f2-WCoy91GYmL5QJlXwT4NzfabUX8l36StEGr_p8yi98GkLj9M" target="_blank">링크</a></td><td>서비스 이용자 증가로 인한 실적 및 시장 점유율 기대.</td></tr>
+                <tr><td>2025-09-30</td><td>시장경제</td><td>키움증권, '주식 더 모으기' 이용자 수 20만명 돌파 <span class="score-badge positive">+1</span></td><td><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGwtAtcKfuENDljAEeSW4bWN8Ubbu4jCHnu2eTTwMxmcICL0HbeXT48BC03GqoJbMCL3o44AzOsaB9T7dsVDGVm1lTFu8qJcgXsnUWbY4EKdCDgZFRJk1162v0pRkW8fbf3tM-z-mkOwpk6GHZ28_pPfteY-Kx_kLhRgg==" target="_blank">링크</a></td><td>서비스 이용자 증가로 인한 실적 및 시장 점유율 기대.</td></tr>
+            </tbody>
+        </table>
+
+        <h3 class="negative-header">부정적 뉴스 (-1)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>날짜</th>
+                    <th>출처</th>
+                    <th>뉴스 제목</th>
+                    <th>링크</th>
+                    <th>근거</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 부정적 뉴스 없음 -->
+            </tbody>
+        </table>
     </div>
 
 </body>
